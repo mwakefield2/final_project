@@ -1,14 +1,19 @@
-# Data Description: IMDB popular movies data
+# Data Description: Tampa's Weather Data
 
-(this is an example only. Edit this file as you see fit. It is recommended that you also include a copy of the original data used for this project in this folder - typically in `.csv` format)
+I use the `tpa_weather_16_17.csv` dataset available at 
+<https://github.com/reisanar/datasets/blob/master/tpa_weather_16_17.csv>
 
-We use the `IMDB_movies.csv` dataset available at 
-<https://github.com/reisanar/datasets/blob/master/IMDB_movies.csv>
+This dataset includes information of Tampa's Weather between 2016-2017
 
-This dataset includes information of popular movies on IMDB in the last 10 years. 
+The data fields included are: year, month, day, precipitation, max temperature,	min temperature.
 
-The data fields included are: Title, Genre, Description, Director, Actors, Year, Runtime, Rating, Votes, Revenue, Metascore (score of the movie on the metacritic website)
+Below I include some basic statistics for this datasets, including dimensions and range of years ...
 
-Below we include some basic statistics for this datasets, including dimensions and range of years ...
-
-(add basic summary if needed. Notice that the information above can be reused for one of the sections for the final project report)
+This datasets was taken everday between 2016-2017. It includes the daily precipaitation, max temperature, and min temperature. A sample of the data is below.
+| year | month | day | precipitation | max_temp |	min_temp |
+|:------:|:-------:|:-----:|:---------------:|:----------:|:----------:|
+|2016	|  1	   | 1   |	0.00000	     | 81.00000	| 70.00000 |
+|2016	|1	|2	|0.00000	|73.00000	|59.00000|
+|2016	|1	|3	|0.18000	|61.00000	|50.00000|
+|2016	|1	|4  |0.00000	|66.00000	|49.00000|
+|2016	|1	|5	|0.00000	|68.00000	|49.00000|
