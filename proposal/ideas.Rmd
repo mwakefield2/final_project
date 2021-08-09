@@ -3,16 +3,18 @@ title: "Project Proposal"
 output: html_notebook
 ---
 
-(notice that you can reuse some of the sections below for the final project report)
 
 ## Section 1. Introduction
 
-Include a brief **introduction or motivation** here
+So the Data set that i choose to work with is the weather in tampa. I chose this data set because I live in the tampa bay area
 
 ## Section 2. Data Analysis Plan
 
-List any **initial questions** you plan to explore in this project. 
+Some initial questions that I plan to explore in this project are:
+- What is the average temp in each month?
+- Which month has the highest precipitation?
+- When is it the best time to travel to tampa based on the weather?
 
 ## Section 3. Data
 
-Include a brief **description of your dataset** (source, available attributes, format, etc.)
+The dataset I choose is linked here <https://github.com/reisanar/datasets/blob/master/tpa_weather_16_17.csv>. This data was taken everyday during 2016-2017. The data records the max temp, min temp and the precipiation.
