@@ -3,11 +3,23 @@ title: "Final Report for Intro to Data Science"
 output: html_notebook
 ---
 
-This is where the final project report write-up goes. 
+# Introduction 
+
+While completing my Introduction to Data Science final project, I used the dataset Tampa’s Weather. This dataset was taken everyday during 2016-2017. Everyday the precipitation, the maximum temperature, and the minimum temperature were recorded. While looking at the data set, I came up with three research questions:  What is the average temperature in each month? Which month has the highest precipitation? and When is it the best time to travel to Tampa based on the weather? 
+
+# What I have Learned about my Research Questions
+
+While creating and answering my research questions, I have learned many things. First, while answering the question: What is the average temperature in each month? I found it necessary to group each month together and run summaries for the mean of the maximum (highest) temperatures and then find the mean of the minimum (lowest) temperatures. These results indicated that it is generally cold during the first four months and last two months; and that it is generally hot during the fifth through the tenth month. Next, while answering the second question: Which month has the highest precipitation? I determined it was necessary to group each month together and run summaries for the mean of the precipitation, and then arrange the data in order from greatest to least. From this data, I learned that August has the highest precipitation, while November has the lowest precipitation. Finally, while answering the third question: When is it the best time to travel to Tampa based on the weather? I discovered that the months needed to be grouped together first, and then find the averages of the maximum temperatures and the minimum temperatures. Next, I filtered out the months that had average maximum temperatures above 85 degrees. Based on this data, I found that the best time to travel to Tampa is in March, April, November, and December. While answering the three questions, I learned many things about Tampa’s weather and R.
+
+# What I would Do Differently 
+
+If I were to start this project over again there would be a few things that I would do differently. The first thing would be to find a dataset with more variables. This dataset was very limited because it included only a few variables, while other datasets had multiple variables. Additionally, I would consider using different research questions. I think I could develop stronger questions. Another improvement I would make would be to create visualizations such as tables and graphs with more detail. 
+
+# Conclusion 
+
+While working on this final project I learned many things about R and Tampa’s weather. A few things that I learned were how to create point graphs and tables that answered a few of the research questions. By creating graphs and tables, I learned how to better predict Tampa’s weather. If I were to do this project over again, there are several ways I could make improvements including using a different dataset with more variables. 
 
 
-Before you submit, make sure everything runs as expected.
 
-You can add sections as you see fit. Make sure you have a section called "Introduction" at the beginning and a section called "Conclusion" at the end. The rest is up to you!
+Here is the Report write up in word [Intro to Data Science Final Project.docx](https://github.com/mwakefield2/final_project/files/6964058/Intro.to.Data.Science.Final.Project.docx)
 
-_Make use of your knowledge of Markdown to appropriately typeset this report!_
