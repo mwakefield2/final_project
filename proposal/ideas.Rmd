@@ -17,4 +17,4 @@ Some initial questions that I plan to explore in this project are:
 
 ## Section 3. Data
 
-The dataset I choose is linked here <https://github.com/reisanar/datasets/blob/master/tpa_weather_16_17.csv>. This data was taken everyday during 2016-2017. The data records the max temp, min temp and the precipiation.
+The dataset I choose is linked here <https://github.com/reisanar/datasets/blob/master/tpa_weather_16_17.csv>. This data was taken everyday during 2016-2017. The data records the max temp, min temp and the precipitation.
