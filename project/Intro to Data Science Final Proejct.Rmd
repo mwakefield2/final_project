@@ -1,0 +1,155 @@
+---
+title: "Intro to Data Science Final Project"
+output: html_notebook
+---
+
+# Exploring and Analyzing Tampa's Weather
+
+# Introduction
+
+Weather changes everyday in Tampa. People are taking many different surveys and recording data to better predict what might occur every hour to alert everyone about the weather. My project investigates weather data that was taken in Tampa during 2016-2017 and tries to help predict what might occur in the future.
+
+
+
+# Prerequisites
+
+Loading the required packages 
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+library(dplyr)
+```
+
+# Datase
+
+```{r}
+tpa_weather <- "https://raw.githubusercontent.com/mwakefield2/datasets/master/tpa_weather_16_17.csv"
+weather <- read_csv(tpa_weather)
+```
+
+# Data Sample
+
+This is the sample print out of the Tampa Weather Data
+
+```{r}
+set.seed(217)
+weather %>%
+  sample_n(25)
+
+```
+
+# Data Exploration
+
+Here is a quick summary of the dataset.
+
+```{r}
+summary(weather)
+```
+
+
+# Exploratory Data Analysis
+
+## Univariate Exploration
+
+To better understand the distribution of my data, I did some univariate visualization based on different fields.
+
+### Precipitation 
+
+The visualization below shows the distribution of the dataset based on precipitation levels. To better understand and visualize the data, I grouped the graph based on the month. Now we can notice that during the 8th month, the precipitation is the highest compared to the other months. This leads me to believe that the data is accurate because during August it rains the most out of all the months.
+
+```{r}
+weather %>%
+  group_by(month) %>%
+  ggplot() +
+  geom_point(mapping = aes(
+    x = month, 
+    y = precipitation,
+    color = month)) +
+  labs(title = "Precipitation Throughout the Months",
+       x = "Month",
+       y = "Precipitation")
+  
+     
+```
+
+### Temperature
+ 
+Next, I wanted to see the maximum and minimum temperatures everyday in each month. To better understand and visualize the data, I grouped the graph based on the month. While looking at the two graphs, the data looks to be accurate because it tends to be cold during the winter months and hotter in the summer months. 
+
+
+```{r}
+weather %>%
+  group_by(month) %>%
+  ggplot() +
+  geom_point(mapping = aes(
+    x = month,
+    y = max_temp
+  ), color = "Red") +
+  labs( title = "Maximum Temperature throughout the Months",
+        x = "Months",
+        y = "Maximum Temperature")
+
+```
+```{r}
+weather %>%
+  group_by(month) %>%
+  ggplot() +
+  geom_point(mapping = aes(
+    x = month,
+    y = min_temp
+  ), color = "Blue") +
+  labs( title = "Minimum Temperature throughout the Months",
+        x = "Months",
+        y = "Minimum Temperature")
+
+```
+
+
+
+# Data Analysis
+
+## Research Questions 
+
+### What is the average temperature in each month?
+
+The best way to answer this question is grouping each month and taking the average of max temp and the min temp 
+
+```{r}
+weather %>%
+  group_by(month) %>%
+  summarise(average_max_temp = mean(max_temp, na.rm = TRUE), average_min_temp = mean(min_temp, na.rm = TRUE)) 
+ 
+```
+
+This could be especially helpful to people traveling to Tampa and people living near Tampa for a few reasons. This table shows which months are generally hotter and generally colder. This data can help people be prepared to get ready for the heat or for the cold. This data could help travelers decide which month to travel to Florida.  
+
+
+### Which month has the highest precipitation?
+
+```{r}
+test <- weather %>%
+  group_by(month) %>%
+  summarise(average_precipitation = mean(precipitation, na.rm = TRUE)) %>%
+  arrange(-average_precipitation)
+test
+```
+
+
+This data is especially helpful for many people such as travelers, sporting events, and everyone living around Tampa. This data shows which month has the highest average precipitation. This can help people to decide which month to plan events and vacations in Tampa. For example people might not want to plan events in August because it has the highest precipitation and instead might choose another month to travel or host an event. This data can help everyone plan out what to do every month based on the average precipitation. 
+
+
+### When is it the best time to travel to Tampa based on the weather?
+
+```{r}
+weather %>% 
+  group_by(month) %>%
+   summarise(average_max_temp = mean(max_temp, na.rm = TRUE), average_min_temp = mean(min_temp, na.rm = TRUE), average_precipitation = mean(precipitation, na.rm = TRUE)) %>%
+  filter(average_max_temp < 85, average_min_temp > 60)
+    
+```
+
+While people love to travel to Tampa, Florida, they do not often like the heat. Most people enjoy the temperature to be less than 85 degrees. So, I created a table above that shows the months that had a average max temperature less than 85. Based on the table above the best time to travel and enjoy outside events are in March, April, November, and December. 
+
+
+
