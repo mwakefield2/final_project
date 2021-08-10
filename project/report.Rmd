@@ -21,5 +21,5 @@ While working on this final project I learned many things about R and Tampa’s 
 
 
 
-Here is the Report write up in word [Intro to Data Science Final Project.docx](https://github.com/mwakefield2/final_project/files/6964058/Intro.to.Data.Science.Final.Project.docx)
+Here is the Report write up in word [Intro to Data Science Final Project.docx](https://github.com/mwakefield2/final_project/files/6964058/Intro.to.Data.Science.Final.Project.docx).
 
